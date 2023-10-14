@@ -6,7 +6,7 @@ pipeline {
     tools {
         
         nodejs  'NodeJS' // Use the name you configured in Jenkins
-        dockerTool 'Docker'
+       
       
     }
 
