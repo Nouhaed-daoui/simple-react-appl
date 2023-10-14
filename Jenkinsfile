@@ -1,5 +1,8 @@
 pipeline {
-    agent any
+    //agent any
+     agent {
+        docker { image 'node:18.18.1-alpine3.18' }
+    }
    
     
     tools {
