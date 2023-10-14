@@ -22,6 +22,8 @@ pipeline {
             steps {
                 // Configure Node.js
                 tool name: 'NodeJS' // Use the name you configured in Jenkins
+
+                withEnv(['NODE_OPTIONS=--max-old-space-size=4096']) {
                 
                 // Install project dependencies
                 //sh 'npm install'
@@ -33,6 +35,8 @@ pipeline {
 
                 // Run tests (if you have test scripts in your package.json)
                 sh 'npm test'
+            }
+                
             }
         }
      
