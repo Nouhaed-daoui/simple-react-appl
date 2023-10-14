@@ -1,6 +1,9 @@
 pipeline {
-    agent any
-    
+    //agent any
+    agent{
+
+    dockerfile true
+    }
     tools {
         
         nodejs  'NodeJS' // Use the name you configured in Jenkins
